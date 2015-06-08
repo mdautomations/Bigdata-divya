@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-mapper.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-mapreduce.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/asm-4.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/charts4j-1.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/guava-r05.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/hadoop-0.20.2-core.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-all-1.7.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-all-1.8.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/java-json.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/javacsv.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/json.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.asm-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.beans-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.context-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.core-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.expression-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.web-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.web.servlet-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

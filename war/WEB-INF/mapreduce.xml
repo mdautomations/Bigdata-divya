@@ -1,0 +1,81 @@
+<configurations>
+
+    <configuration name="Process User Behaviour">
+	    <property>
+		    <name>mapreduce.map.class</name>
+		    <value>com.map.mapper.CountHousesMapper</value>
+	    </property>
+	    <property>
+		    <name>mapreduce.inputformat.class</name>
+	    	<value>com.google.appengine.tools.mapreduce.DatastoreInputFormat</value>
+	    </property>
+	     <property>
+    	<!--  This is the URL to call after the entire Mapper has run -->
+    		<name>mapreduce.appengine.donecallback.url</name>
+    		<value>/callbacks/CountHousesCallback</value>
+    	</property>
+	    <property>
+	      <name human="Entity Kind to Map Over">mapreduce.mapper.inputformat.datastoreinputformat.entitykind</name>
+	      <value template="optional">Process User Behaviour</value>
+    	</property>
+    	<!-- <property>
+	      <name human="Search for HouseId">mapreduce.mapper.counter.substringtarget</name>
+	      <value template="optional">Houseid</value>      
+    	</property> -->
+    </configuration>
+    
+    
+    <configuration name="Fetch Advertisement">
+	    <property>
+		    <name>mapreduce.map.class</name>
+		    <value>com.map.mapper.ConsumptionForHouseId</value>
+	    </property>
+	    <property>
+		    <name>mapreduce.inputformat.class</name>
+	    	<value>com.google.appengine.tools.mapreduce.DatastoreInputFormat</value>
+	    </property>
+	     <property>
+    	<!--  This is the URL to call after the entire Mapper has run -->
+    		<name>mapreduce.appengine.donecallback.url</name>
+    		<value>/callbacks/consumption</value>
+    	</property>
+	    <property>
+	      <name human="Entity Kind to Map Over">mapreduce.mapper.inputformat.datastoreinputformat.entitykind</name>
+	      <value template="optional">Fetch Advertisement</value>
+    	</property>
+    	<property>
+	      <name human="Search using keyword">mapreduce.mapper.counter.substringtarget</name>
+	      <value template="optional">Advertisement ID</value>      
+    	</property>
+    </configuration>
+    
+    
+    
+	<configuration name="Import All the Data from Blobstore">
+	<!-- <property>
+    	 This is the URL to call after the entire Mapper has run
+    	<name>mapreduce.appengine.donecallback.url</name>
+    	<value>/callbacks/consumption</value>
+    </property> -->
+	<property>
+		<name>mapreduce.map.class</name>
+		<value>com.map.mapper.ImportFromBlobstoreMapper</value>
+	</property>
+	<property>
+		<name>mapreduce.inputformat.class</name>
+		<value>com.google.appengine.tools.mapreduce.BlobstoreInputFormat</value>
+	</property>
+	<property>
+		<name human="Blob keys to map over">mapreduce.mapper.inputformat.blobstoreinputformat.blobkeys</name>
+		<value template="optional">blobkeyhere</value>
+	</property>
+	<property>
+		<name human="Number of shards to use">mapreduce.mapper.shardcount</name>
+		<value template="optional">3</value>
+	</property>
+	<!-- <property>
+  		<name>mapreduce.mapper.inputprocessingrate</name>
+  		<value>**2000**</value>
+	</property> -->
+</configuration>
+</configurations>
